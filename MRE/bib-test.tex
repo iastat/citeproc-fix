@@ -1,4 +1,3 @@
-% this works fine with \documentclass{article}, for example
 \documentclass[12pt,]{isuthesis}
 
 % http://tex.stackexchange.com/questions/3033/forcing-linebreaks-in-url
@@ -6,110 +5,113 @@
 
 \begin{document}
 
-% commenting out this line doesn't help...
 \specialchapt{BIBLIOGRAPHY}
 
-% if you remove the hypertargets, the line breaks are computed correctly
+% redefine hypertarget command to add a line break after the target
+% needed to avoid overfull vbox (which leads to incorrect page breaking)
+\let\oldhypertarget\hypertarget
+\renewcommand{\hypertarget}[2]{\oldhypertarget{#1}{#2}~\\}
+
 \hypertarget{ref-rgl}{}
 Adler, D., Murdoch, D., \& others. (2016). \emph{Rgl: 3D visualization
 using opengl}. Retrieved from
 \url{https://CRAN.R-project.org/package=rgl}
-\\
+
 \hypertarget{ref-Ahlberg:1991}{}
 Ahlberg, C., Williamson, C., \& Shneiderman, B. (1991). Dynamic queries
 for information exploration: An implementation and evaluation. In
 \emph{ACM chi '92 conference proceedings} (Vol. 21, pp. 619--626).
-\\
+
 \hypertarget{ref-flexdashboard}{}
 Allaire, J. (2016). \emph{Flexdashboard: R markdown format for flexible
 dashboards}. Retrieved from
 \url{https://CRAN.R-project.org/package=flexdashboard}
-\\
+
 \hypertarget{ref-rmarkdown}{}
 Allaire, J., Cheng, J., Xie, Y., McPherson, J., Chang, W., Allen, J.,
 \ldots{} Hyndman, R. (2016). \emph{Rmarkdown: Dynamic documents for r}.
 Retrieved from \url{https://CRAN.R-project.org/package=rmarkdown}
-\\
+
 \hypertarget{ref-patent}{}
 Alt, A., \& White, M. S. (2008, September 11). Tracking an object with
 multiple asynchronous cameras. patent. Retrieved from
 \url{http://www.patentlens.net/patentlens/patent/US_7062320/}
-\\
+
 \hypertarget{ref-viewing-pipeline}{}
 Andreas Buja, C. H., Daniel Asimov, \& McDonald, J. A. (1988). Elements
 of a viewing pipeline for data analysis. In W. S. Cleveland \& M. E.
 McGill (Eds.), \emph{Dynamic graphics for statistics}. Belmont,
 California: Wadsworth, Inc.
-\\
+
 \hypertarget{ref-grand-tour}{}
 Asimov, D. (1985). The grand tour: A tool for viewing multidimensional
 data. \emph{SIAM J. Sci. Stat. Comput.}, \emph{6}(1), 128--143.
 \url{https://doi.org/10.1137/0906011}
-\\
+
 \hypertarget{ref-colourpicker}{}
 Attali, D. (2016). \emph{Colourpicker: A colour picker widget for shiny
 apps, rstudio, r-markdown, and 'htmlwidgets'}. Retrieved from
 \url{https://CRAN.R-project.org/package=colourpicker}
-\\
+
 \hypertarget{ref-gridExtra}{}
 Auguie, B. (2016). \emph{GridExtra: Miscellaneous functions for ``grid'' graphics}. Retrieved from \url{https://CRAN.R-project.org/package=gridExtra}
-\\
+
 \hypertarget{ref-magrittr}{}
 Bache, S. M., \& Wickham, H. (2014). \emph{Magrittr: A forward-pipe operator for r}. Retrieved from \url{https://CRAN.R-project.org/package=magrittr}
-\\
-\hypertarget{ref-etl}{} 
+
+\hypertarget{ref-etl}{}
 Baumer, B., \& Sievert, C. (2016). \emph{Etl: Extract-transfer-load framework for medium data}. Retrieved from \url{http://github.com/beanumber/etl}
-\\
+
 \hypertarget{ref-bayes-js}{}
 Bååth, R. (2016). An implementation of a small mcmc framework and some
 likelihood functions for doing bayes stats in the browser.
 https://github.com/rasmusab/bayes.js.
-\\
+
 \hypertarget{ref-S:1978}{}
 Becker, R. A., \& Chambers, J. M. (1978). Design and implementation of
 the 's' system for interactive data analysis. \emph{Proceedings of
 COMPSAC}, 626--629.
-\\
+
 \hypertarget{ref-brushing-scatterplots}{}
 Becker, R., \& Cleveland, W. (1987). Brushing scatterplots.
 \emph{Technometrics}, \emph{29}(2), 127--142.
-\\
+
 \hypertarget{ref-Bischof}{}
 Bischof, J. M., \& Airoldi, E. M. (2012). Summarizing topical content
 with word frequency and exclusivity. In \emph{Icml}.
-\\
+
 \hypertarget{ref-Blei-2009}{}
 Blei, D. M., \& Lafferty, J. (2009). Visualizing topics with multi-word
 expressions. \emph{Arxiv}. Retrieved from
 \url{https://arxiv.org/pdf/0907.1013.pdf}
-\\
+
 \hypertarget{ref-crowdsourcing-graphical-perception}{}
 Bostock, J. H. A. M. (2010). Crowdsourcing graphical perception: Using
 mechanical turk to assess visualization design. In \emph{ACM human
 factors in computing systems (chi)} (pp. 203--212). Retrieved from
 \url{http://vis.stanford.edu/papers/crowdsourcing-graphical-perception}
-\\
+
 \hypertarget{ref-d3}{}
 Bostock, M., Oglevetsky, V., \& Heer, J. (2011). D3 data-driven
 documents. \emph{IEEE Transactions on Visualization and Computer
 Graphics}, \emph{17}(12), 2301--2309.
-\\
+
 \hypertarget{ref-gapminder}{}
 Bryan, J. (2015). \emph{Gapminder: Data from gapminder}. Retrieved from
 \url{https://CRAN.R-project.org/package=gapminder}
-\\
+
 \hypertarget{ref-Gretarsson}{}
 Brynjar Gretarsson, S. B., John O'Donovan, \& Smyth, P. (2011).
 TopicNets: Visual analysis of large text corpora with topic modeling. In
 \emph{ACM transactions on intelligent systems and technology}.
-\\
+
 \hypertarget{ref-Buja:2009hp}{}
 Buja, A., Cook, D., Hofmann, H., Lawrence, M., Lee, E.-K., Swayne, D.
 F., \& Wickham, H. (2009). Statistical inference for exploratory data
 analysis and model diagnostics. \emph{Philosophical Transactions of the
 Royal Society A: Mathematical, Physical and Engineering Sciences},
 \emph{367}(1906), 4361--4383.
-\\
+
 \hypertarget{ref-Buja:1991vh}{}
 Buja, A., McDonald, J. A., Michalak, J., \& Stuetzle, W. (1991).
 Interactive data visualization using focusing and linking. \emph{IEEE
