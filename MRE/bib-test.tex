@@ -10,7 +10,7 @@
 % redefine hypertarget command to add a line break after the target
 % needed to avoid overfull vbox (which leads to incorrect page breaking)
 \let\oldhypertarget\hypertarget
-\renewcommand{\hypertarget}[2]{\oldhypertarget{#1}{#2}~\\}
+\renewcommand{\hypertarget}[2]{\oldhypertarget{#1}{#2}~\\[0in]}
 
 \hypertarget{ref-rgl}{}
 Adler, D., Murdoch, D., \& others. (2016). \emph{Rgl: 3D visualization
